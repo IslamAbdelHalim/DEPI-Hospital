@@ -53,21 +53,21 @@ Additional tools:
    ```bash
    git clone https://github.com/your-username/DEPI-Hospital.git
    cd DEPI-Hospital
-
+  ```
 2. Backend Setup
   Navigate to the server folder:
   ```bash
   cd server
   npm install
   npm start
-
+  ```
 3. Frontend setup
   Navigate to the client folder:
   ```bash
   cd client
   npm install
   ng serve
-
+  ```
 4. Open your browser and go to `http://localhost:4200/` to view the application.
 
 ## Usage
