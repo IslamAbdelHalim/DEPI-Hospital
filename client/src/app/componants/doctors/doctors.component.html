@@ -1,0 +1,69 @@
+<!-- Body -->
+
+<div class="mt-1 container py-2 bold" dir="rtl">
+  <div class="block2 m-auto d-flex justify-content-start">
+    <span><a href="#" class="h6">الرئيسية</a></span>
+    <span> > </span>
+    <span><a href="#" class="h6">أطبائنا</a></span>
+  </div>
+</div>
+
+<!-- Second div my doctor with image Background  -->
+
+<div class="col-12 mt-1 container-fluid">
+  <div class="block3 d-flex justify-content-end">
+    <p class="container d-flex align-items-center">أطبائنا</p>
+    <div class="overlay"></div>
+  </div>
+</div>
+
+<!-- Third div search doctor  -->
+
+<div class="col-12 mt-4">
+  <div class="block4 d-flex justify-content-end">
+    <p class="container d-flex align-items-center">أبحث عن طبيبك</p>
+  </div>
+</div>
+
+<!-- forth div search doctor  -->
+
+<div class="container">
+  <div class="d-flex align-items-center justify-content-between mx-auto mt-2 w-50">
+    <div class="mb-2">
+      <select class="form-select text-center" id="dropdown2">
+        <option selected>أختر التخصص</option>
+        <option value="1">باطنة</option>
+        <option value="1">أنف وأذن وحنجرة</option>
+        <option value="1">عظام</option>
+      </select>
+    </div>
+    <div >
+      <div class="input-group">
+        <button type="button" class="btn btn-primary" id="btn1">
+          بحث
+        </button>
+        <input type="text" class="form-control text-center" id="input1" placeholder="أسم الطبيب" />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div *ngFor="let doctor of doctors | paginate: {id: 'docs', itemsPerPage: itemsPerPage, currentPage: page, totalItems: totalItems}" class="container mb-5">
+  <div class="doc d-flex align-items-center justify-content-evenly my-3 w-75 mx-auto rounded-3 py-4">
+    <div class="time text-end d-flex flex-column align-items-around">
+      <p>{{doctor.availability.time}} : {{doctor.availability.days[0]}}</p>
+      <p>{{doctor.availability.time}} : {{doctor.availability.days[1]}}</p>
+    </div>
+    <div class="info" dir="rtl">
+      <h2 class="name">{{ doctor.name }}</h2>
+      <h5>{{ doctor.clinic }}</h5>
+      <p>{{ doctor.education }}</p>
+    </div>
+    <div class="image">
+      <img [src]="'assets/doctors/' + doctor.profile_image + '-min.jpg'" alt="" class="doctor-image fluid-image rounded-3">
+    </div>
+  </div>
+</div>
+
+<pagination-controls (pageChange)="onChange($event)" id="docs" class="d-flex justify-content-center"></pagination-controls>

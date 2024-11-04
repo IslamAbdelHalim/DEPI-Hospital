@@ -1,0 +1,62 @@
+
+
+.block1 {
+  height: 100%;
+  width: 100%;
+  background-image: url(../../../../public/assets/login/Login.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.row {
+  margin: 90px 0;
+}
+
+.overlay {
+  width: 400px !important;
+  height: 450px;
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+
+.form-container {
+  width: 100%;
+}
+
+.col {
+  color: white !important;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #09A5B0 !important;
+}
+
+.Ncol {
+  color: rgb(131, 127, 127) !important;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+label {
+  color: #09A5B0;
+  font-weight: bold;
+}
+
+.buSub {
+  background-color: #09A5B0 !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 22px !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .form-container {
+    padding: 20px;
+    /* Adjust padding for mobile devices */
+  }
+
+  div button {
+    font-size: 18px;
+    /* Smaller button font for mobile */
+  }
+}

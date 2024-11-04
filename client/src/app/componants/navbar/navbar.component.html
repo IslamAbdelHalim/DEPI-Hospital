@@ -1,0 +1,49 @@
+<div *ngIf="dialog">
+  <div class="overlay w-100"></div>
+  <div class="dialog" dir="rtl">
+    <div class="head d-flex align-items-center justify-content-between">
+      <h2>تسجيل دخول</h2>
+      <h5 class="close" (click)="this.dialog=false">X</h5>
+    </div>
+    <hr>
+    <p class="my-4">برجاء تسجيل الدخول لتتمكن من حجز موعدك</p>
+    <hr>
+    <button type="button" (click)="dialogClick()" class="btn btn-success">تسجيل دخول</button>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <button type="button" class="book btn rounded-pill" (click)="book()">
+      احجز موعدك
+    </button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <fa-icon [icon]="faBars"></fa-icon>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto h-100 p-0" dir="rtl">
+        <li class="nav-item">
+          <a href="#" class="nav-link active">الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a href="./doctors" class="nav-link">أطبائنا</a>
+        </li>
+        <li class="nav-item dropdown position-lg-relative">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><span>خدماتنا</span></a>
+          <ul class="dropdown-menu position-lg-absolute top-lg-100">
+            <li><a href="./departments" class="dropdown-item">اقسامنا</a></li>
+            <li><a href="#" class="dropdown-item">عملائنا</a></li>
+            <li><a href="./allclinics" class="dropdown-item">عيادات</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="./article" class="nav-link">مقالات</a>
+        </li>
+        <li class="nav-item">
+          <a href="./inquiries" class="nav-link">للمرضى</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

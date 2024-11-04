@@ -1,0 +1,72 @@
+
+ /* first div my doctor hyperlink path */
+
+.block2 span a {
+   text-decoration: none;
+   color: gray;
+}
+
+
+/* Second div my doctor with image Background */
+
+.block3 {
+   width: 100%;
+   height: 180px;
+   background-image: url('../../../../public/assets/doctors/cover.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   position: relative;
+   color: white;
+}
+
+.block3 p {
+   z-index: 10;
+}
+
+/* Third div search doctor */
+
+
+.block3 p {
+   width: 70%;
+   direction: rtl;
+   font-weight: bold;
+   font-size: 30px;
+}
+
+.overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background-image: linear-gradient( 90deg, #0093A100, #00363B8A);
+   z-index: 5;
+}
+
+/* forth div search doctor */
+
+
+.block4 {
+   width: auto;
+   height: 50px;
+
+}
+
+.block4 p {
+   width: 70%;
+   direction: rtl;
+   font-size: 22px;
+   font-weight: bold;
+}
+
+.doctor-image {
+   width: 175px;
+   height: 175px;
+   object-fit: cover;
+}
+
+.doc {
+   background-image: linear-gradient(90deg, #0093A1, #00363B);
+   color: #eee;
+}
