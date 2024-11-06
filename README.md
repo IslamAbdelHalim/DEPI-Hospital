@@ -113,14 +113,14 @@ DEPI-Hospital/
 
 ## Screenshots
 
-![Home Page](../screenshots/clerify.jpg)
-![Appointment Booking](../screenshots/Screenshot%202024-10-20%20204050.jpg)
-![clinics Profile](../screenshots/Screenshot%202024-10-20%20194210.jpg)
-![clinics Profile](../screenshots/Screenshot%202024-10-20%20194702.jpg)
-![clinic Profile](../screenshots/Screenshot%202024-10-20%20194855.jpg)
-![Responsive Design](../screenshots/Screenshot%202024-10-20%20220420.jpg)
-![Responsive Design](../screenshots/Screenshot%202024-10-20%20220524.jpg)
-![Responsive Design](../screenshots/)
+![Home Page](./screenshots/clerify.jpg)
+![Appointment Booking](./screenshots/Screenshot%202024-10-20%20204050.jpg)
+![clinics Profile](./screenshots/Screenshot%202024-10-20%20194210.jpg)
+![clinics Profile](./screenshots/Screenshot%202024-10-20%20194702.jpg)
+![clinic Profile](./screenshots/Screenshot%202024-10-20%20194855.jpg)
+![Responsive Design](./screenshots/Screenshot%202024-10-20%20220420.jpg)
+![Responsive Design](./screenshots/Screenshot%202024-10-20%20220524.jpg)
+![Responsive Design](./screenshots/)
 
 ## Future Improvements
 
