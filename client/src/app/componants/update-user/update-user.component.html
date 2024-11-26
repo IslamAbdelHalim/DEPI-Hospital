@@ -16,7 +16,7 @@
             <button class="btn btn-outline-success" (click)="triggerFileInput()">تغيير الصورة الشخصية</button>
           </label>
         </div>
-        <input id="ImageUpload" type="file" class="d-none">
+        <input id="ImageUpload" type="file" accept="image/*" class="d-none" formControlName="photo">
       </div>
       <div class="normal-info w-50 text-end p-5">
         <h5>تعديل البيانات</h5><hr>

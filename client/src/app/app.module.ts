@@ -40,7 +40,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { SignInDialogComponent } from './componants/sign-in-dialog/sign-in-dialog.component';
 import { UpdateUserComponent } from './componants/update-user/update-user.component';
 import { TestimonialsComponent } from './componants/testimonials/testimonials.component';
-
+import { CookieService} from "ngx-cookie-service";
 
 @NgModule({
   declarations: [
@@ -91,7 +91,8 @@ import { TestimonialsComponent } from './componants/testimonials/testimonials.co
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    CookieService
   ],
   bootstrap: [AppComponent]
 })

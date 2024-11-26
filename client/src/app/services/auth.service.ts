@@ -1,4 +1,5 @@
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+import { CookieService} from "ngx-cookie-service";
 import { BehaviorSubject } from 'rxjs';
 import { isPlatformBrowser} from "@angular/common";
 
@@ -9,12 +10,13 @@ export class AuthService {
   private loggedIn = new BehaviorSubject<boolean>(false);
   loggedIn$ = this.loggedIn.asObservable();
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private cookieService: CookieService) {
     this.checkLogin();
+
   }
 
   private checkLogin(): void {
-    const token = this.getToken();
+    const token = this.cookieService.get('token');
     if (token) {
       console.log('User is logged in');
       this.loggedIn.next(true);
@@ -33,11 +35,14 @@ export class AuthService {
   }
 
   getToken(): any {
-    if (isPlatformBrowser(this.platformId)) {
-      const token =  localStorage.getItem('token')
-      console.log(`this is the token ${token}`)
-      return token;
-    }
+    // if (isPlatformBrowser(this.platformId)) {
+    //   const token =  localStorage.getItem('token')
+    //   console.log(`this is the token ${token}`)
+    //   return token;
+    // }
+    console.log(this.cookieService.get('token'));
+
+    return this.cookieService.get('token');
   }
 
   login(): void {

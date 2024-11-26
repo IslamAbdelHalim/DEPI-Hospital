@@ -39,7 +39,7 @@ const userSchema = new mongoose.Schema({
   },
   picture: {
     type: String,
-    default: 'profile.jpg',
+    default: 'default.jpg',
   },
   birthday: {
     type: Date,

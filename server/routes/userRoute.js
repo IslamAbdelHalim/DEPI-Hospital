@@ -3,6 +3,8 @@ import {
   getUserById,
   deleteUser,
   updateUser,
+  uploadImage,
+  resizeImage
 } from '../controllers/userControllers.js';
 import { validateRoute } from '../controllers/authControllers.js';
 
@@ -13,6 +15,6 @@ userRouter
   .get(validateRoute, getUserById)
   .delete(validateRoute, deleteUser);
 
-userRouter.route('/update/:id').patch(validateRoute, updateUser);
+userRouter.route('/update').patch(validateRoute,uploadImage, resizeImage, updateUser);
 
 export default userRouter;

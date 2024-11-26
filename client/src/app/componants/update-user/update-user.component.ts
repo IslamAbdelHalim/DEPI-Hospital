@@ -14,7 +14,7 @@ import {UserService} from "../../services/user.service";
 export class UpdateUserComponent {
   updateInfo: FormGroup = new FormGroup({})
   userDate: any = {};
-  imageUrl: string = 'assets/profile.png'
+  imageUrl: string = '../../../images/user/default.png'
   dialog: boolean = false;
 
   constructor(private userService: UserService,
@@ -30,6 +30,7 @@ export class UpdateUserComponent {
       email: [this.userDate.email, [Validators.email]],
       phone: [this.userDate.phone],
       birthday:[] ,
+      photo: [this.userDate.photo],
     });
     this.getUserData();
   }
@@ -76,6 +77,7 @@ export class UpdateUserComponent {
     if (this.updateInfo.valid) {
       const id = this.router.url.split('/')[3];
       const updateData = this.updateInfo.value;
+      console.log(updateData)
       this.spinner.show();
       this.userService.updateUser(id, updateData).subscribe((res) => {
         this.userDate = res.data.user
